@@ -156,7 +156,7 @@ function getSearchResults() {
   var client = ZAFClient.init();
   var query = $("#linked-ticket-search").val();
   var settings = {
-    url: '/api/v2/search.json?query=type:ticket ' + query,
+    url: '/api/v2/search.json?query=type:ticket tags:known_issue tags:feature_request ' + query,
     type: 'GET',
     dataType: 'json',
   };
